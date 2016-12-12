@@ -1,16 +1,20 @@
+
+
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS9.1 备忘录字数统计刚开始学习狗神的ios逆向工程做的第一个实战项目，刚做出来的内心还是蛮激动的。书上写的是iOS8.1的系统下的分析。我使用的平台是iOS9.1，手机是iPhone5s.有些类稍微有些区别。接下来简单再说下整个流程，算是对这个项目的一个回顾吧。首先整体的思路与书上写的差不多，首先定位到MobileNotes的可执行文件：用过ssh或者操作页面导出MobileNotes，拖">
+<html lang="null">
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="null">
+    <title>Hexo</title>
+
+    <!-- Open Graph -->
+    <meta name="description" content="iOS9.1 &amp;#x5907;&amp;#x5FD8;&amp;#x5F55;&amp;#x5B57;&amp;#x6570;&amp;#x7EDF;&amp;#x8BA1;&amp;#x521A;&amp;#x5F00;&amp;#x59CB;&amp;#x5B66;&amp;#x4E60;&amp;#x72D7;&amp;#x795E;&amp;#x7684;ios&amp;#x9006;&amp;#x5411;&amp;#x5DE5;&amp;#x7A0B;&amp;#x505A;&amp;#x7684;&amp;#x7B2C;&amp;#x4E00;&amp;#x4E2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/2016/12/12/CharacountForNotes9实战/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="iOS9.1 备忘录字数统计刚开始学习狗神的ios逆向工程做的第一个实战项目，刚做出来的内心还是蛮激动的。书上写的是iOS8.1的系统下的分析。我使用的平台是iOS9.1，手机是iPhone5s.有些类稍微有些区别。接下来简单再说下整个流程，算是对这个项目的一个回顾吧。首先整体的思路与书上写的差不多，首先定位到MobileNotes的可执行文件：用过ssh或者操作页面导出MobileNotes，拖">
+<meta property="og:description" content="iOS9.1 &amp;#x5907;&amp;#x5FD8;&amp;#x5F55;&amp;#x5B57;&amp;#x6570;&amp;#x7EDF;&amp;#x8BA1;&amp;#x521A;&amp;#x5F00;&amp;#x59CB;&amp;#x5B66;&amp;#x4E60;&amp;#x72D7;&amp;#x795E;&amp;#x7684;ios&amp;#x9006;&amp;#x5411;&amp;#x5DE5;&amp;#x7A0B;&amp;#x505A;&amp;#x7684;&amp;#x7B2C;&amp;#x4E00;&amp;#x4E2">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79jw1fao23tchrnj30wk030wh0.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79jw1fao23tftwdj31gt02fjv5.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006y8lVajw1fao23ticydj30ct01ldge.jpg">
@@ -21,168 +25,223 @@
 <meta property="og:updated_time" content="2016-12-12T07:58:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="iOS9.1 备忘录字数统计刚开始学习狗神的ios逆向工程做的第一个实战项目，刚做出来的内心还是蛮激动的。书上写的是iOS8.1的系统下的分析。我使用的平台是iOS9.1，手机是iPhone5s.有些类稍微有些区别。接下来简单再说下整个流程，算是对这个项目的一个回顾吧。首先整体的思路与书上写的差不多，首先定位到MobileNotes的可执行文件：用过ssh或者操作页面导出MobileNotes，拖">
+<meta name="twitter:description" content="iOS9.1 &amp;#x5907;&amp;#x5FD8;&amp;#x5F55;&amp;#x5B57;&amp;#x6570;&amp;#x7EDF;&amp;#x8BA1;&amp;#x521A;&amp;#x5F00;&amp;#x59CB;&amp;#x5B66;&amp;#x4E60;&amp;#x72D7;&amp;#x795E;&amp;#x7684;ios&amp;#x9006;&amp;#x5411;&amp;#x5DE5;&amp;#x7A0B;&amp;#x505A;&amp;#x7684;&amp;#x7B2C;&amp;#x4E00;&amp;#x4E2">
 <meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006tNc79jw1fao23tchrnj30wk030wh0.jpg">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:undefined",
+  "image": "undefined",
+  "name": "John Doe",
+  "url": "http://yoursite.com"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
+</script>
+
+    
+
+    
+    
+        <link href="https://fonts.gmirror.org/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
 
 </head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
+
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
+
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>Hexo</h3>
+        </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-CharacountForNotes9实战" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/12/CharacountForNotes9实战/" class="article-date">
-  <time datetime="2016-12-12T07:32:19.000Z" itemprop="datePublished">2016-12-12</time>
-</a>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">John Doe</a>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        
+                    </div>
+
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
     
-  </div>
-  <div class="article-inner">
     
+
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="iOS9-1-备忘录字数统计"><a href="#iOS9-1-备忘录字数统计" class="headerlink" title="iOS9.1 备忘录字数统计"></a>iOS9.1 备忘录字数统计</h2><p>刚开始学习狗神的ios逆向工程做的第一个实战项目，刚做出来的内心还是蛮激动的。书上写的是iOS8.1的系统下的分析。我使用的平台是iOS9.1，手机是iPhone5s.有些类稍微有些区别。接下来简单再说下整个流程，算是对这个项目的一个回顾吧。<br>首先整体的思路与书上写的差不多，首先定位到MobileNotes的可执行文件：<br><img src="http://ww1.sinaimg.cn/large/006tNc79jw1fao23tchrnj30wk030wh0.jpg" alt=""><br>用过ssh或者操作页面导出MobileNotes，拖入hopper中。<br>为MobileNotes注入cycript：<br>输入：UIApp.keyWindow.recursiveDescription().toString()<br>我再页面上输入secret，这时候再打印出来的UI层次上会找到包含secret的对象：<br><img src="http://ww2.sinaimg.cn/large/006tNc79jw1fao23tftwdj31gt02fjv5.jpg" alt=""><br>找到个ICTextView,通过持续调用nextResponder，找出他的controller：<br><img src="http://ww2.sinaimg.cn/large/006y8lVajw1fao23ticydj30ct01ldge.jpg" alt=""><br>从class-dump出来的头文件中找到ICNoteEditorViewController.h<br>发现有个ICNote类型属性，打印这个note对象会发现各个字段含义都比较清晰。<br>ICNote类属于iOS9的私有类，网上有人在github上放出了iOS所有类的头文件，大家可以自行查找。<br>在ICnote类中我们可以找到<br><img src="http://ww3.sinaimg.cn/large/006y8lVajw1fao23tm9v9j30rn03hmzg.jpg" alt=""><br>打印出来title对象：<br><img src="http://ww1.sinaimg.cn/large/006y8lVajw1fao23txal1j3072014glm.jpg" alt=""><br>正是我们想要的。接下来找到监测note内容实时变化的方法：<br><img src="http://ww4.sinaimg.cn/large/006y8lVajw1fao23tv9k3j31cx04b790.jpg" alt=""><br>我们进入UITextViewDelegate类中，发现有这么一个类：</p>
-<ul>
-<li>(void)textViewDidChange:(UITextView *)arg1;<br>通过debugserver+lldb调试MobileNotes。会发现这个方法在你修改note内容的时候会被持续调用。那怎么拿到note的实时数据呢？<br><img src="http://ww1.sinaimg.cn/large/006tNc79jw1fao23t90a5j31ge07igqy.jpg" alt=""><br>直接打印text就行了，iOS9比iOS8确实方便了许多。。整个流程已经完了。接下来编写下Tweak就大功告成了。详细的Tweak我放在GitHub上了，欢迎大家访问：<br><a href="https://github.com/FurionXin/CharacountForNotes9" target="_blank" rel="external">https://github.com/FurionXin/CharacountForNotes9</a><br>有什么意见批评指正的欢迎大家给我留言。</li>
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-CharacountForNotes9实战" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <h2 id="iOS9-1-&#x5907;&#x5FD8;&#x5F55;&#x5B57;&#x6570;&#x7EDF;&#x8BA1;"><a href="#iOS9-1-&#x5907;&#x5FD8;&#x5F55;&#x5B57;&#x6570;&#x7EDF;&#x8BA1;" class="headerlink" title="iOS9.1 &#x5907;&#x5FD8;&#x5F55;&#x5B57;&#x6570;&#x7EDF;&#x8BA1;"></a>iOS9.1 &#x5907;&#x5FD8;&#x5F55;&#x5B57;&#x6570;&#x7EDF;&#x8BA1;</h2><p>&#x521A;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x72D7;&#x795E;&#x7684;ios&#x9006;&#x5411;&#x5DE5;&#x7A0B;&#x505A;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x6218;&#x9879;&#x76EE;&#xFF0C;&#x521A;&#x505A;&#x51FA;&#x6765;&#x7684;&#x5185;&#x5FC3;&#x8FD8;&#x662F;&#x86EE;&#x6FC0;&#x52A8;&#x7684;&#x3002;&#x4E66;&#x4E0A;&#x5199;&#x7684;&#x662F;iOS8.1&#x7684;&#x7CFB;&#x7EDF;&#x4E0B;&#x7684;&#x5206;&#x6790;&#x3002;&#x6211;&#x4F7F;&#x7528;&#x7684;&#x5E73;&#x53F0;&#x662F;iOS9.1&#xFF0C;&#x624B;&#x673A;&#x662F;iPhone5s.&#x6709;&#x4E9B;&#x7C7B;&#x7A0D;&#x5FAE;&#x6709;&#x4E9B;&#x533A;&#x522B;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x7B80;&#x5355;&#x518D;&#x8BF4;&#x4E0B;&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#xFF0C;&#x7B97;&#x662F;&#x5BF9;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x7684;&#x4E00;&#x4E2A;&#x56DE;&#x987E;&#x5427;&#x3002;<br>&#x9996;&#x5148;&#x6574;&#x4F53;&#x7684;&#x601D;&#x8DEF;&#x4E0E;&#x4E66;&#x4E0A;&#x5199;&#x7684;&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x9996;&#x5148;&#x5B9A;&#x4F4D;&#x5230;MobileNotes&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF1A;<br><a class="magnific-img" href="http://ww1.sinaimg.cn/large/006tNc79jw1fao23tchrnj30wk030wh0.jpg"><img src="http://ww1.sinaimg.cn/large/006tNc79jw1fao23tchrnj30wk030wh0.jpg" alt="" class="ui centered image"></a><br>&#x7528;&#x8FC7;ssh&#x6216;&#x8005;&#x64CD;&#x4F5C;&#x9875;&#x9762;&#x5BFC;&#x51FA;MobileNotes&#xFF0C;&#x62D6;&#x5165;hopper&#x4E2D;&#x3002;<br>&#x4E3A;MobileNotes&#x6CE8;&#x5165;cycript&#xFF1A;<br>&#x8F93;&#x5165;&#xFF1A;UIApp.keyWindow.recursiveDescription().toString()<br>&#x6211;&#x518D;&#x9875;&#x9762;&#x4E0A;&#x8F93;&#x5165;secret&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x518D;&#x6253;&#x5370;&#x51FA;&#x6765;&#x7684;UI&#x5C42;&#x6B21;&#x4E0A;&#x4F1A;&#x627E;&#x5230;&#x5305;&#x542B;secret&#x7684;&#x5BF9;&#x8C61;&#xFF1A;<br><a class="magnific-img" href="http://ww2.sinaimg.cn/large/006tNc79jw1fao23tftwdj31gt02fjv5.jpg"><img src="http://ww2.sinaimg.cn/large/006tNc79jw1fao23tftwdj31gt02fjv5.jpg" alt="" class="ui centered image"></a><br>&#x627E;&#x5230;&#x4E2A;ICTextView,&#x901A;&#x8FC7;&#x6301;&#x7EED;&#x8C03;&#x7528;nextResponder&#xFF0C;&#x627E;&#x51FA;&#x4ED6;&#x7684;controller&#xFF1A;<br><a class="magnific-img" href="http://ww2.sinaimg.cn/large/006y8lVajw1fao23ticydj30ct01ldge.jpg"><img src="http://ww2.sinaimg.cn/large/006y8lVajw1fao23ticydj30ct01ldge.jpg" alt="" class="ui centered image"></a><br>&#x4ECE;class-dump&#x51FA;&#x6765;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x627E;&#x5230;ICNoteEditorViewController.h<br>&#x53D1;&#x73B0;&#x6709;&#x4E2A;ICNote&#x7C7B;&#x578B;&#x5C5E;&#x6027;&#xFF0C;&#x6253;&#x5370;&#x8FD9;&#x4E2A;note&#x5BF9;&#x8C61;&#x4F1A;&#x53D1;&#x73B0;&#x5404;&#x4E2A;&#x5B57;&#x6BB5;&#x542B;&#x4E49;&#x90FD;&#x6BD4;&#x8F83;&#x6E05;&#x6670;&#x3002;<br>ICNote&#x7C7B;&#x5C5E;&#x4E8E;iOS9&#x7684;&#x79C1;&#x6709;&#x7C7B;&#xFF0C;&#x7F51;&#x4E0A;&#x6709;&#x4EBA;&#x5728;github&#x4E0A;&#x653E;&#x51FA;&#x4E86;iOS&#x6240;&#x6709;&#x7C7B;&#x7684;&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x67E5;&#x627E;&#x3002;<br>&#x5728;ICnote&#x7C7B;&#x4E2D;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x627E;&#x5230;<br><a class="magnific-img" href="http://ww3.sinaimg.cn/large/006y8lVajw1fao23tm9v9j30rn03hmzg.jpg"><img src="http://ww3.sinaimg.cn/large/006y8lVajw1fao23tm9v9j30rn03hmzg.jpg" alt="" class="ui centered image"></a><br>&#x6253;&#x5370;&#x51FA;&#x6765;title&#x5BF9;&#x8C61;&#xFF1A;<br><a class="magnific-img" href="http://ww1.sinaimg.cn/large/006y8lVajw1fao23txal1j3072014glm.jpg"><img src="http://ww1.sinaimg.cn/large/006y8lVajw1fao23txal1j3072014glm.jpg" alt="" class="ui centered image"></a><br>&#x6B63;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x627E;&#x5230;&#x76D1;&#x6D4B;note&#x5185;&#x5BB9;&#x5B9E;&#x65F6;&#x53D8;&#x5316;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;<br><a class="magnific-img" href="http://ww4.sinaimg.cn/large/006y8lVajw1fao23tv9k3j31cx04b790.jpg"><img src="http://ww4.sinaimg.cn/large/006y8lVajw1fao23tv9k3j31cx04b790.jpg" alt="" class="ui centered image"></a><br>&#x6211;&#x4EEC;&#x8FDB;&#x5165;UITextViewDelegate&#x7C7B;&#x4E2D;&#xFF0C;&#x53D1;&#x73B0;&#x6709;&#x8FD9;&#x4E48;&#x4E00;&#x4E2A;&#x7C7B;&#xFF1A;</p>
+<ul class="ui list">
+<li>(void)textViewDidChange:(UITextView *)arg1;<br>&#x901A;&#x8FC7;debugserver+lldb&#x8C03;&#x8BD5;MobileNotes&#x3002;&#x4F1A;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5728;&#x4F60;&#x4FEE;&#x6539;note&#x5185;&#x5BB9;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x88AB;&#x6301;&#x7EED;&#x8C03;&#x7528;&#x3002;&#x90A3;&#x600E;&#x4E48;&#x62FF;&#x5230;note&#x7684;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x5462;&#xFF1F;<br><img src="http://ww1.sinaimg.cn/large/006tNc79jw1fao23t90a5j31ge07igqy.jpg" alt=""><br>&#x76F4;&#x63A5;&#x6253;&#x5370;text&#x5C31;&#x884C;&#x4E86;&#xFF0C;iOS9&#x6BD4;iOS8&#x786E;&#x5B9E;&#x65B9;&#x4FBF;&#x4E86;&#x8BB8;&#x591A;&#x3002;&#x3002;&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x5DF2;&#x7ECF;&#x5B8C;&#x4E86;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x7F16;&#x5199;&#x4E0B;Tweak&#x5C31;&#x5927;&#x529F;&#x544A;&#x6210;&#x4E86;&#x3002;&#x8BE6;&#x7EC6;&#x7684;Tweak&#x6211;&#x653E;&#x5728;GitHub&#x4E0A;&#x4E86;&#xFF0C;&#x6B22;&#x8FCE;&#x5927;&#x5BB6;&#x8BBF;&#x95EE;&#xFF1A;<br><a href="https://github.com/FurionXin/CharacountForNotes9" target="_blank" rel="external">https://github.com/FurionXin/CharacountForNotes9</a><br>&#x6709;&#x4EC0;&#x4E48;&#x610F;&#x89C1;&#x6279;&#x8BC4;&#x6307;&#x6B63;&#x7684;&#x6B22;&#x8FCE;&#x5927;&#x5BB6;&#x7ED9;&#x6211;&#x7559;&#x8A00;&#x3002;</li>
 </ul>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/12/CharacountForNotes9实战/" data-id="ciwltghun0000e3d09ru8iey2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2016/12/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
+                        
+                    </div>
 
-  
-</article>
+                    
+                    
+                    
 
-</section>
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2016-12-12T07:32:19.000Z" itemprop="datePublished">2016-12-12</time>
+
+    </span>
+    <span class="post-description-item">
         
-          <aside id="sidebar">
-  
-    
+    </span>
+</div>
 
-  
-    
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a class="ui tiny button disabled"><i class="angle left icon"></i>Previous</a>
+
+                
+            </div>
+            <div class="column nav-right">
+                
+
+                <a href="/2016/12/12/hello-world/" class="ui tiny button">
+                    
+                    Hello World
+                    
+                    <i class="angle right icon"></i></a>
+                
+            </div>
+        </div>
     </div>
-  </div>
 
+</div>
+                
+            </div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/12/12/CharacountForNotes9实战/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2016/12/12/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#iOS9-1-备忘录字数统计"><span>iOS9.1 备忘录字数统计</span></a></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
     </div>
-  </div>
+</div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2016 <a href="/">John Doe</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
     </div>
-  </div>
-</footer>
+</div>
+
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
+<!-- scripts list from theme config.yml -->
 
-  </div>
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
 </body>
 </html>

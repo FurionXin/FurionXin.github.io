@@ -1,214 +1,216 @@
+
+
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+<html lang="null">
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="null">
+    <title>Hexo</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:undefined",
+  "image": "undefined",
+  "name": "John Doe",
+  "url": "http://yoursite.com"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
+</script>
+
+    
+
+    
+    
+        <link href="https://fonts.gmirror.org/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
 
 </head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
+
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
+
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>Hexo</h3>
+        </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-CharacountForNotes9实战" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/12/CharacountForNotes9实战/" class="article-date">
-  <time datetime="2016-12-12T07:32:19.000Z" itemprop="datePublished">2016-12-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="iOS9-1-备忘录字数统计"><a href="#iOS9-1-备忘录字数统计" class="headerlink" title="iOS9.1 备忘录字数统计"></a>iOS9.1 备忘录字数统计</h2><p>刚开始学习狗神的ios逆向工程做的第一个实战项目，刚做出来的内心还是蛮激动的。书上写的是iOS8.1的系统下的分析。我使用的平台是iOS9.1，手机是iPhone5s.有些类稍微有些区别。接下来简单再说下整个流程，算是对这个项目的一个回顾吧。<br>首先整体的思路与书上写的差不多，首先定位到MobileNotes的可执行文件：<br><img src="http://ww1.sinaimg.cn/large/006tNc79jw1fao23tchrnj30wk030wh0.jpg" alt=""><br>用过ssh或者操作页面导出MobileNotes，拖入hopper中。<br>为MobileNotes注入cycript：<br>输入：UIApp.keyWindow.recursiveDescription().toString()<br>我再页面上输入secret，这时候再打印出来的UI层次上会找到包含secret的对象：<br><img src="http://ww2.sinaimg.cn/large/006tNc79jw1fao23tftwdj31gt02fjv5.jpg" alt=""><br>找到个ICTextView,通过持续调用nextResponder，找出他的controller：<br><img src="http://ww2.sinaimg.cn/large/006y8lVajw1fao23ticydj30ct01ldge.jpg" alt=""><br>从class-dump出来的头文件中找到ICNoteEditorViewController.h<br>发现有个ICNote类型属性，打印这个note对象会发现各个字段含义都比较清晰。<br>ICNote类属于iOS9的私有类，网上有人在github上放出了iOS所有类的头文件，大家可以自行查找。<br>在ICnote类中我们可以找到<br><img src="http://ww3.sinaimg.cn/large/006y8lVajw1fao23tm9v9j30rn03hmzg.jpg" alt=""><br>打印出来title对象：<br><img src="http://ww1.sinaimg.cn/large/006y8lVajw1fao23txal1j3072014glm.jpg" alt=""><br>正是我们想要的。接下来找到监测note内容实时变化的方法：<br><img src="http://ww4.sinaimg.cn/large/006y8lVajw1fao23tv9k3j31cx04b790.jpg" alt=""><br>我们进入UITextViewDelegate类中，发现有这么一个类：</p>
-<ul>
-<li>(void)textViewDidChange:(UITextView *)arg1;<br>通过debugserver+lldb调试MobileNotes。会发现这个方法在你修改note内容的时候会被持续调用。那怎么拿到note的实时数据呢？<br><img src="http://ww1.sinaimg.cn/large/006tNc79jw1fao23t90a5j31ge07igqy.jpg" alt=""><br>直接打印text就行了，iOS9比iOS8确实方便了许多。。整个流程已经完了。接下来编写下Tweak就大功告成了。详细的Tweak我放在GitHub上了，欢迎大家访问：<br><a href="https://github.com/FurionXin/CharacountForNotes9" target="_blank" rel="external">https://github.com/FurionXin/CharacountForNotes9</a><br>有什么意见批评指正的欢迎大家给我留言。</li>
-</ul>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">John Doe</a>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        
+                    </div>
 
-      
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/12/CharacountForNotes9实战/" data-id="ciwltghun0000e3d09ru8iey2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
 
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/12/hello-world/" class="article-date">
-  <time datetime="2016-12-12T03:43:13.000Z" itemprop="datePublished">2016-12-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
+</div>
+
     
     
-      <header class="article-header">
+
+    
+    
+    
+
+    
+    <a href="/index.html" class="active item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        
+
+<div class="ui relaxed list">
+
+    
+
+    
+
+    <div class="item">
+
+        <div class="content post-content">
+
+    <a class="header" style="display: inline-block;" href="/2016/12/12/CharacountForNotes9实战/">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/12/hello-world/">Hello World</a>
-    </h1>
-  
+        
+        
+    </a>
+    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2016-12-12T07:32:19.000Z" itemprop="datePublished">2016-12-12</time>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+    </span>
+    <span class="post-description-item">
+        
+    </span>
+</div>
+</div>
 
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/12/hello-world/" data-id="ciwltghus0001e3d0m19pj71x" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
+    
 
-  
+    
 
-</section>
+    <div class="item">
+
+        <div class="content post-content">
+
+    <a class="header" style="display: inline-block;" href="/2016/12/12/hello-world/">
         
-          <aside id="sidebar">
-  
-    
+        
+        Hello World
+    </a>
+    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2016-12-12T03:43:13.000Z" itemprop="datePublished">2016-12-12</time>
 
-  
-    
+    </span>
+    <span class="post-description-item">
+        
+    </span>
+</div>
+</div>
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
     </div>
-  </div>
 
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/12/12/CharacountForNotes9实战/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2016/12/12/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+</div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
+
     
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2016 <a href="/">John Doe</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    </div>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
+<!-- scripts list from theme config.yml -->
 
-  </div>
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
 </body>
 </html>
