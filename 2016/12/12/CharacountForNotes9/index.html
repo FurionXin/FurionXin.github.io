@@ -86,9 +86,9 @@
 
 <meta name="description" content="iOS9.1 备忘录字数统计刚开始学习狗神的ios逆向工程做的第一个实战项目，刚做出来的内心还是蛮激动的。书上写的是iOS8.1的系统下的分析。我使用的平台是iOS9.1，手机是iPhone5s.有些类稍微有些区别。接下来简单再说下整个流程，算是对这个项目的一个回顾吧。首先整体的思路与书上写的差不多，首先定位到MobileNotes的可执行文件：用过ssh或者操作页面导出MobileNotes，拖">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="FurionXin的博客">
 <meta property="og:url" content="http://yoursite.com/2016/12/12/CharacountForNotes9/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="FurionXin的博客">
 <meta property="og:description" content="iOS9.1 备忘录字数统计刚开始学习狗神的ios逆向工程做的第一个实战项目，刚做出来的内心还是蛮激动的。书上写的是iOS8.1的系统下的分析。我使用的平台是iOS9.1，手机是iPhone5s.有些类稍微有些区别。接下来简单再说下整个流程，算是对这个项目的一个回顾吧。首先整体的思路与书上写的差不多，首先定位到MobileNotes的可执行文件：用过ssh或者操作页面导出MobileNotes，拖">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79jw1fao23tchrnj30wk030wh0.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79jw1fao23tftwdj31gt02fjv5.jpg">
@@ -99,7 +99,7 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79jw1fao23t90a5j31ge07igqy.jpg">
 <meta property="og:updated_time" content="2016-12-12T12:16:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="FurionXin的博客">
 <meta name="twitter:description" content="iOS9.1 备忘录字数统计刚开始学习狗神的ios逆向工程做的第一个实战项目，刚做出来的内心还是蛮激动的。书上写的是iOS8.1的系统下的分析。我使用的平台是iOS9.1，手机是iPhone5s.有些类稍微有些区别。接下来简单再说下整个流程，算是对这个项目的一个回顾吧。首先整体的思路与书上写的差不多，首先定位到MobileNotes的可执行文件：用过ssh或者操作页面导出MobileNotes，拖">
 <meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006tNc79jw1fao23tchrnj30wk030wh0.jpg">
 
@@ -110,7 +110,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","avater":"http://ww2.sinaimg.cn/large/006y8lVajw1fap08e50n4j30b40b474s.jpg"},
+    sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -135,7 +135,7 @@
 
 
 
-  <title>  | Hexo </title>
+  <title>  | FurionXin的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -156,7 +156,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -166,7 +166,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Hexo</span>
+      <span class="site-title">FurionXin的博客</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -198,22 +198,32 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
           </a>
         </li>
       
@@ -249,15 +259,15 @@
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/12/CharacountForNotes9/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="John Doe">
+    <meta itemprop="name" content="FurionXin">
     <meta itemprop="description" content="">
     <meta itemprop="image" content="/images/avatar.gif">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
+    <meta itemprop="name" content="FurionXin的博客">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Hexo" src="">
+      <img style="display:none;" itemprop="url image" alt="FurionXin的博客" src="">
     </span>
   </span>
 
@@ -402,9 +412,9 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
-               alt="John Doe" />
-          <p class="site-author-name" itemprop="name">John Doe</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+               alt="FurionXin" />
+          <p class="site-author-name" itemprop="name">FurionXin</p>
+          <p class="site-description motion-element" itemprop="description">Be Careful!!!</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -472,7 +482,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">FurionXin</span>
 </div>
 
 
